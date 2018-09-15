@@ -37,4 +37,11 @@ export default class Matrix extends Component {
       ['#F00', '#F00', '#F00', '#F00', '#F00', '#F00', '#F00', '#F00', '#F00', '#F00'],
       ['#F00', '#F00', '#F00', '#F00', '#F00', '#F00', '#F00', '#F00', '#F00', '#F00']
     ]
+
+    // from soln => they just set up a.... self-onvoking arrow fn? which just
+    //creates a new array and fills it with the rows we want
+    // values: (() => {
+    //   const defRow = ['#F00', '#F00', '#F00', '#F00', '#F00', '#F00', '#F00', '#F00', '#F00', '#F00']
+    //   return (new Array(10).fill(defRow))
+    // })()
   }
