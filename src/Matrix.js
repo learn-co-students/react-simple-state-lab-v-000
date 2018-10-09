@@ -24,4 +24,5 @@ export default class Matrix extends Component {
 
 Matrix.defaultProps = {
   values: Array(10).fill(null).map(_ => Array(10).fill('#F00'))
+ // values: [['#F00', '#00F'], ['#00F','#F00']]
 }
