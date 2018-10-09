@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 
-export default class Cell extends Component {
+class Cell extends Component {
 
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.state = {
-          color: null
+          color: props.value
         };
     }  
 
@@ -16,12 +16,11 @@ export default class Cell extends Component {
     }   
 
     render() {
-        if (!this.state.color) {
-            this.setState({color: this.props.value});
-        }
         return (
             <div className="cell" onClick={this.handleClick} style={{backgroundColor: this.state.color}}></div>
         )
     }
     
 }
+
+export default Cell

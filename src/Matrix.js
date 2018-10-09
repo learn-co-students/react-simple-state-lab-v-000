@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Cell from './cell.js'
+import Cell from './Cell.js'
 
 export default class Matrix extends Component {
   
@@ -11,8 +11,7 @@ export default class Matrix extends Component {
     this.props.values.map(rowVals => <div className="row">{this.genRow(rowVals)}</div>)
   )
   
-  render() {
-    console.log("matrix render",this.props.values);    
+  render() { 
     return (
       <div id="matrix">
         {this.genMatrix()}
@@ -24,5 +23,4 @@ export default class Matrix extends Component {
 
 Matrix.defaultProps = {
   values: Array(10).fill(null).map(_ => Array(10).fill('#F00'))
- // values: [['#F00', '#00F'], ['#00F','#F00']]
 }
