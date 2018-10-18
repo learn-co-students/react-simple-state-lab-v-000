@@ -10,7 +10,7 @@ export default class Cell extends Component{
   }
   handleColorChange = () => {
     this.setState({
-      color: "#33"
+      color: "#333"
     })
   }
 
