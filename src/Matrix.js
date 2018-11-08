@@ -35,3 +35,11 @@ Matrix.defaultProps ={
     ['#F00', '#F00', '#F00', '#F00', '#F00', '#F00', '#F00', '#F00', '#F00', '#F00']
   ]
 }
+
+// A more elegant way to assign default matrix
+// Matrix.defaultProps = {
+//   values: (() => {
+//     const defRow = ['#F00', '#F00', '#F00', '#F00', '#F00', '#F00', '#F00', '#F00', '#F00', '#F00']
+//     return (new Array(10).fill(defRow))
+//   })()
+// }
