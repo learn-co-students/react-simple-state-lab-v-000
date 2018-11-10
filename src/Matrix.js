@@ -19,3 +19,11 @@ export default class Matrix extends Component {
   }
   
 }
+
+Matrix.defaultProps = {
+  values: (() => {
+    const val = '#F00'
+    const row = new Array(10).fill(val)
+    return (new Array(10).fill(row))
+  })()
+}
