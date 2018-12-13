@@ -3,7 +3,8 @@ import React, { Component } from 'react';
 export default class Matrix extends Component {
   
   genRow = (vals) => (
-    vals.map(val => <div className="cell"></div>) // replace me and render a cell component instead!
+    //vals.map(val => <div className="cell"></div>) // replace me and render a cell component instead!
+    <Cell value={val} />
   )
   
   genMatrix = () => (
@@ -17,5 +18,12 @@ export default class Matrix extends Component {
       </div>
     )
   }
-  
+
+}
+
+Matrix.defaultProps = {
+  values: (function(){
+    const row = ['#F00','#F00' ,'#F00','#F00' ,'#F00', '#F00','#F00' ,'#F00','#F00' ,'#F00']
+    return (new Array(10).fill(row))
+  })()
 }
