@@ -11,3 +11,11 @@ export var pattern1 = [
   ['#F00', '#00F', '#F00', '#00F', '#F00', '#00F', '#F00', '#00F', '#F00', '#00F'],
   ['#F00', '#00F', '#F00', '#00F', '#F00', '#00F', '#F00', '#00F', '#F00', '#00F']
 ]
+
+const redRow = ['#F00', '#F00', '#F00', '#F00', '#F00', '#F00', '#F00', '#F00', '#F00', '#F00'];
+
+export const defaultRedPattern = new Array(10).fill(redRow)
+
+//const redRow = ['#F00', '#F00', '#F00', '#F00', '#F00', '#F00', '#F00', '#F00', '#F00', '#F00'];
+
+//export const defaultRedPattern = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((element) => redRow)
