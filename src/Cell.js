@@ -3,10 +3,10 @@ import React, { Component } from 'react';
 export default class Cell extends Component {
 
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
       color: this.props.value
-    }
+    };
   }
 
   render() {
@@ -14,7 +14,7 @@ export default class Cell extends Component {
       <div
       className = "cell"
       style={{backgroundColor: this.state.color}}
-      onClick={clickListener()}
+      onClick={this.clickListener} //was calling with() and without this and error was reading undefined
       >
       </div>
     )
