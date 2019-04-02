@@ -28,3 +28,4 @@ Matrix.defaultProps = {
     return (new Array(10).fill(defRow))
   })()
 }
+// can also use a simple array of 10 columns and 10 rows of values: [ ]
