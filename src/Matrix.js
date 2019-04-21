@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import Cell from './Cell.js'
+
 
 export default class Matrix extends Component {
   
   genRow = (vals) => (
-    vals.map(val => <Cell value={val}/>) // replace me and render a cell component instead!
+    vals.map(val => <Cell value={val}/>) // render a cell component
   )
   
   genMatrix = () => (
@@ -21,7 +21,7 @@ export default class Matrix extends Component {
   
 }
 
-Matrix.defaultProps = {
+Matrix.defaultProps= {
   values: [
     ['#F00', '#F00', '#F00', '#F00', '#F00', '#F00', '#F00', '#F00', '#F00', '#F00'],
     ['#F00', '#F00', '#F00', '#F00', '#F00', '#F00', '#F00', '#F00', '#F00', '#F00'],
@@ -36,6 +36,8 @@ Matrix.defaultProps = {
   ]
   
 }
+
+
 
 // learn solution for default:
 //Matrix.defaultProps = {
