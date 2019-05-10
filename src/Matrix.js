@@ -1,5 +1,17 @@
 import React, { Component } from 'react';
 import Cell from './Cell';
+const defaultValues = [
+  ['#F00', '#00F', '#F00', '#00F', '#F00', '#00F', '#F00', '#00F', '#F00', '#00F'],
+  ['#F00', '#00F', '#F00', '#00F', '#F00', '#00F', '#F00', '#00F', '#F00', '#00F'],
+  ['#F00', '#00F', '#F00', '#00F', '#F00', '#00F', '#F00', '#00F', '#F00', '#00F'],
+  ['#F00', '#00F', '#F00', '#00F', '#F00', '#00F', '#F00', '#00F', '#F00', '#00F'],
+  ['#F00', '#00F', '#F00', '#00F', '#F00', '#00F', '#F00', '#00F', '#F00', '#00F'],
+  ['#F00', '#00F', '#F00', '#00F', '#F00', '#00F', '#F00', '#00F', '#F00', '#00F'],
+  ['#F00', '#00F', '#F00', '#00F', '#F00', '#00F', '#F00', '#00F', '#F00', '#00F'],
+  ['#F00', '#00F', '#F00', '#00F', '#F00', '#00F', '#F00', '#00F', '#F00', '#00F'],
+  ['#F00', '#00F', '#F00', '#00F', '#F00', '#00F', '#F00', '#00F', '#F00', '#00F'],
+  ['#F00', '#00F', '#F00', '#00F', '#F00', '#00F', '#F00', '#00F', '#F00', '#00F']
+]
 
 export default class Matrix extends Component {
   
@@ -7,9 +19,10 @@ export default class Matrix extends Component {
     vals.map(val => < Cell value={val} />)
   )
   
-  genMatrix = () => (
-    this.props.values.map(rowVals => <div className="row">{this.genRow(rowVals)}</div>)
-  )
+  genMatrix = () => {
+		const colors = this.props.values ? this.props.values : this.defaultValues
+    return colors.map(rowVals => <div className="row">{this.genRow(rowVals)}</div>)
+  }
   
   render() {
     return (
