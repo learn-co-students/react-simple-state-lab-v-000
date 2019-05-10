@@ -22,7 +22,7 @@ export default class Matrix extends Component {
   )
   
   genMatrix = () => {
-		const colors = this.props.values ? this.props.values : this.defaultProps
+		const colors =  this.props.values ? this.props.values : this.defaultProps.values
     return colors.map(rowVals => <div className="row">{this.genRow(rowVals)}</div>)
   }
   
