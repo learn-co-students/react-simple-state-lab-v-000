@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 
 export default class Cell extends Component {
-   
+
   constructor(props) {
     super(props) 
     this.state = {
@@ -10,8 +10,9 @@ export default class Cell extends Component {
     }
   }
 
+  
   handleClick = () => {
-    this.setState ({
+    this.setState({
       color: '#333'
     })
   }
@@ -19,10 +20,12 @@ export default class Cell extends Component {
   render() {
     return (
       <div 
-      className='cell'
+      className="cell" 
       style={{backgroundColor: this.state.color}}
-      onClick={this.handleClick}>
-      </div>
+      onClick={this.handleClick}
+      ></div>
     )
   }
 }
+  
+
