@@ -1,4 +1,6 @@
-class Cell extends React.Component {
+import React, { Component } from 'react';
+
+export default class Cell extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -15,9 +17,7 @@ class Cell extends React.Component {
 
   render () {
     return (
-      <div class="cell" onClick={this.cell}></div>
-      // style={{backgroundColor: newColor}}
+      <div className="cell" style={{backgroundColor: this.state.color}} onClick={this.cell}></div>
     )
   }
-
 }
