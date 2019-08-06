@@ -1,5 +1,6 @@
 
-export var pattern1 = [
+
+var pattern1 = [
   ['#F00', '#00F', '#F00', '#00F', '#F00', '#00F', '#F00', '#00F', '#F00', '#00F'],
   ['#F00', '#00F', '#F00', '#00F', '#F00', '#00F', '#F00', '#00F', '#F00', '#00F'],
   ['#F00', '#00F', '#F00', '#00F', '#F00', '#00F', '#F00', '#00F', '#F00', '#00F'],
@@ -11,3 +12,15 @@ export var pattern1 = [
   ['#F00', '#00F', '#F00', '#00F', '#F00', '#00F', '#F00', '#00F', '#F00', '#00F'],
   ['#F00', '#00F', '#F00', '#00F', '#F00', '#00F', '#F00', '#00F', '#F00', '#00F']
 ]
+
+const COLOR = [ "#f00", "#f00", "#f00", "#f00", "#f00", "#f00", "#f00", "#f00", "#f00", "#f00" ];
+var colors = new Array(10);
+for(let i = 0; i < colors.length; i++){ colors[i] = COLOR.slice(0, COLOR.length) } 
+
+
+export {pattern1, colors} 
+
+
+
+
+
