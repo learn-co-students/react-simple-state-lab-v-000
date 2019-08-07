@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 export default class Cell extends Component {
 
-	constructor (props) {
+	constructor(props) {
 		super(props)
 		this.state = { color: this.props.value }
 	}
@@ -18,7 +18,7 @@ export default class Cell extends Component {
 			<div 
 				className='cell' 
 				style={{backgroundColor: this.state.color}}
-				onclick={this.newBC}>
+				onClick={this.newBC}>
 			</div>
     )
 	}
