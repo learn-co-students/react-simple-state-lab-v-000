@@ -43,3 +43,12 @@ function tenByTenRed() { // Return an array of 10 arrays, each containing 10 '#F
 
   return allRed;
 }
+
+// Based on the solution, here's a shorter version of tenByTenRed:
+/*
+  Matrix.defaultProps = {
+    values: (() => {
+      return (new Array(10).fill(new Array(10).fill('#F00')))
+    })()
+  }
+*/
