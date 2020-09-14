@@ -1,3 +1,4 @@
+// You'll see that pattern1 is a nested array of '#F00' and '#00F' (red and blue).
 
 export var pattern1 = [
   ['#F00', '#00F', '#F00', '#00F', '#F00', '#00F', '#F00', '#00F', '#F00', '#00F'],
