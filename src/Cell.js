@@ -9,9 +9,15 @@ export default class Cell extends Component {
     }
   }
 
+  changeHex = () => {
+    this.setState({
+      color: '#333'
+    })
+  }
+
   render() {
     return (
-      <div className="cell" style={{backgroundColor: this.state.color}}>
+      <div className="cell" onClick={this.changeHex} style={{backgroundColor: this.state.color}}>
       </div>
     )
   }
