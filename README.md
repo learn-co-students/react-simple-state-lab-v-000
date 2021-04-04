@@ -20,10 +20,10 @@ amount of cells, with the appropriate amount of values.
 
 Let's take some time to understand the code base. First, open up the `index.js` file and you'll see that Matrix gets a `values` prop of `pattern1` which is imported from `data.js`. Go ahead and open up `data.js` to see what `pattern1` is. You'll see that `pattern1` is a nested array of '#F00' and '#00F' (red and blue).
 
-Now let's look at `Matrix.js`. The `render()` method shows us what our `Matrix` component looks like: a `<div>` tag with `id=matrix`. But inside that div, we invoke `this.genMatrix()`. We see that `genMatrix` is an instance method which maps `this.props.values` to an array of JSX. Basically, every 'row' in `this.props.values` will create a `<div className="row">`. Furthermore,
-if we look at `genRow`, we'll see that every row will map through its `vals` to create an array of `<div className="cell">` JSX.
- 
+Now let's look at `Matrix.js`. The `render()` method shows us what our `Matrix` component looks like: a `<div>` tag with `id=matrix`. But inside that div, we invoke `this.genMatrix()`. We see that `genMatrix` is an instance method which maps `this.props.values` to an array of JSX. Basically, every 'row' in `this.props.values` will create a `<div className="row">`. Furthermore, if we look at `genRow`, we'll see that every row will map through its `vals` to create an array of `<div className="cell">` JSX.
+
 In the end, the following HTML is generated (You can run this lab and use Chrome's developer tools to check for yourself):
+
 ```html
 <div id="root">
   <div id="matrix">
@@ -31,13 +31,13 @@ In the end, the following HTML is generated (You can run this lab and use Chrome
       <div class="cell"></div>
       <div class="cell"></div>
       <div class="cell"></div>
-        ...
+      ...
     </div>
     <div class="row">
       <div class="cell"></div>
       <div class="cell"></div>
       <div class="cell"></div>
-        ...
+      ...
     </div>
   </div>
 </div>
@@ -58,7 +58,7 @@ case no `values` prop is passed.
    the values '#F00' (red). For inspiration, take a look at `src/data.js`.
 2. Once you have made your `Cell` component, replace the return value in
    `genRow`'s map to: `<Cell value={val} />`. Here we are specifying our `Cell`
-   component should have a `value` prop. 
+   component should have a `value` prop.
 
 ### `Cell`
 
@@ -72,12 +72,12 @@ single `state` value: `color`, (which will be a 3 digit hex value i.e. '#FFF').
    required in React components if we are to use `this.state` in the constructor).
    Ultimately, our constructor should look something like this:
 
-    ```js
-    constructor(props) {
-      super()
-      this.state = {} // ...define initial state with a key of 'color' set to the 'value' prop
-    }
-    ```
+   ```js
+   constructor(props) {
+     super()
+     this.state = {} // ...define initial state with a key of 'color' set to the 'value' prop
+   }
+   ```
 
 2. `Cell` should render a single `<div>` with a className of `cell`
 3. In render, the cell should set the background color in-line for the `<div>`
@@ -97,4 +97,3 @@ single `state` value: `color`, (which will be a 3 digit hex value i.e. '#FFF').
 3. If `pattern1` is passed to `Matrix` in `src/index.js`, then the cells are
    alternating red-blue
 4. When you click on any given cell, that cell's color changes to dark gray
-

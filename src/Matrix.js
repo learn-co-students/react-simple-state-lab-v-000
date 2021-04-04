@@ -1,9 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
+import Cell from './Cell.js';
 
-export default class Matrix extends Component {
+class Matrix extends React.Component {
   
   genRow = (vals) => {
-    return vals.map(val => <div className="cell"></div>) // replace me and render a cell component instead!
+    // debugger
+    return vals.map(val => <Cell value={val} />)
   }
   
   genMatrix = () => {
@@ -19,3 +21,20 @@ export default class Matrix extends Component {
   }
   
 }
+
+Matrix.defaultProps = {
+  values: [
+    ['#F00', '#F00', '#F00', '#F00', '#F00', '#F00', '#F00', '#F00', '#F00', '#F00'],
+    ['#F00', '#F00', '#F00', '#F00', '#F00', '#F00', '#F00', '#F00', '#F00', '#F00'],
+    ['#F00', '#F00', '#F00', '#F00', '#F00', '#F00', '#F00', '#F00', '#F00', '#F00'],
+    ['#F00', '#F00', '#F00', '#F00', '#F00', '#F00', '#F00', '#F00', '#F00', '#F00'],
+    ['#F00', '#F00', '#F00', '#F00', '#F00', '#F00', '#F00', '#F00', '#F00', '#F00'],
+    ['#F00', '#F00', '#F00', '#F00', '#F00', '#F00', '#F00', '#F00', '#F00', '#F00'],
+    ['#F00', '#F00', '#F00', '#F00', '#F00', '#F00', '#F00', '#F00', '#F00', '#F00'],
+    ['#F00', '#F00', '#F00', '#F00', '#F00', '#F00', '#F00', '#F00', '#F00', '#F00'],
+    ['#F00', '#F00', '#F00', '#F00', '#F00', '#F00', '#F00', '#F00', '#F00', '#F00'],
+    ['#F00', '#F00', '#F00', '#F00', '#F00', '#F00', '#F00', '#F00', '#F00', '#F00']
+  ]
+}
+
+export default Matrix;
