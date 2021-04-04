@@ -1,10 +1,10 @@
-import React, { Component } from "react";
+import React from "react";
 
-export default class Cell extends Component {
-  constructor(val) {
+class Cell extends React.Component {
+  constructor(props) {
     super()
     this.state = {
-      color: val
+      color: props.value
     }
   }
 
@@ -20,3 +20,5 @@ export default class Cell extends Component {
     )
   }
 }
+
+export default Cell;
