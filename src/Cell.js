@@ -7,12 +7,12 @@ export default class Cell extends Component {
             color:props.value
         }
     }
-    clickHandle(){
+    clickHandler = ()=>{
         this.setState({color:'#333'})
     }
     render(){
         return(
-            <div className="cell" onClick={this.clickHandle} style={{backgroundColor: this.state.color}} ></div>
+            <div className="cell" onClick={this.clickHandler} style={{backgroundColor: this.state.color}} ></div>
         )
     }
 }
